@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--@author Vikram Pasumarti, vpasuma@purdue.edu @version 27 October 2016-->
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Economica|Cairo|Changa');
+    body {
+            color: white;
+            text-align: center;
+        font-family: 'Cairo', sans-serif;
+        background-color: #053142
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: 'Economica', sans-serif;
+            font-size: 500%;
+            margin: 0px;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            font-family: 'Cairo', sans-serif;
+            font-size: 80%;
+            margin: 0px;
+        }
+        table {
+            alignment: center;
+            color: white;
+            font-family: 'Cairo', sans-serif;
+            font-size: 20px;
+            text-align: center;
+            margin-left:auto;
+            margin-right:auto;
+            empty-cells: hide;
+
+        }
+        th {
+            font-family: 'Cairo', sans-serif;
+            border: 1px outset white;
+            empty-cells: hide;
+            background-color: #051021;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        td {
+            font-family: 'Cairo', sans-serif;
+            border: 1px outset white;
+            empty-cells: hide;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        textarea {
+            margin-left:auto;
+            margin-right:auto;
+            border-radius: 25px;
+            border: 2px outset #051021;
+            padding: 10px;
+            width: 800px;
+            height: 150px;
+            font-size: 20px;
+            font-family: 'Changa', sans-serif;
+            resize: none;
+        }
+
+        button {
+            font-family: 'Cairo', sans-serif;
+            background-color: white;
+            border: 2px outset #051021;
+            border-radius: 10px;
+            color: black;
+            padding: 10px;
+            text-align: center;
+        }
+        button:active {
+            padding: 3px;
+        }
+        a {
+            color: white;
+            font-family: 'Cairo', sans-serif;
+            font-size: 12px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+        }
+    </style>
+    <title>NumDatSum.js</title>
+</head>
+<body>
+    <h1>NumDatSum.js</h1>
+    <h2>@author Vikram Pasumarti @version 27 October 2016</h2>
+    Enter data here. Make sure the values are seperated by commas<br>
+    <textarea rows="5" cols="80" id="Enter Data here" title="Enter data here"></textarea> <br>
+    <script src="NumericalDataSummary.js"></script>
+    <button onclick="numDatSumMain()">Calculate</button> <br>
+    <table>
+        <tr>
+            <th> Mean </th>
+            <th> Median </th>
+            <th> Mode </th>
+            <th>Standard Deviation</th>
+            <th>Range</th>
+            <th>First Quartile</th>
+            <th>Third Quartile</th>
+            <th>Interquartile Range</th>
+            <th>Maximum</th>
+            <th>Minimum</th>
+        </tr>
+        <tr>
+            <td id = 'meanText'></td>
+            <td id = 'medianText'></td>
+            <td id = 'modeText'></td>
+            <td id = 'stddevText'></td>
+            <td id = 'rangeText'></td>
+            <td id = 'Q1Text'></td>
+            <td id = 'Q3Text'></td>
+            <td id = 'iqrText'></td>
+            <td id = 'maxText'></td>
+            <td id = 'minText'></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Skew</th>
+            <th>Five Number Summary</th>
+            <th>Outlier Fences</th>
+            <th>List of Outliers</th>
+        </tr>
+        <tr>
+            <td id = 'skewText'></td>
+            <td id = 'fiveNumSumText'></td>
+            <td id = 'outliersText1'></td>
+            <td id = 'listOutliersText1'></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id = 'outliersText2'></td>
+            <td id = 'listOutliersText2'></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id = 'outliersText3'></td>
+            <td id = 'listOutliersText3'></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id = 'outliersText4'></td>
+            <td id = 'listOutliersText4'></td>
+        </tr>
+    </table>
+    <a href="https://github.com/vk117">NumDatSum.js GitHub repo</a>
+</body>
+
+</html>
