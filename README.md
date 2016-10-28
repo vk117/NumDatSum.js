@@ -1,5 +1,5 @@
 # NumDatSum.js
-<img src="pictHasher image.jpg" />
+<img src="numdatsumjs_screenshot.jpg" />
 
 How to Run the Program
 ----------------------
