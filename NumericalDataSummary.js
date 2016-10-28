@@ -75,17 +75,24 @@ function mode(array) {
     }
     var maxCount = max(modeCount);
     var check = 0;
-    for (i = 0; i < modeCount.length; i++) {
-        check = check + (modeCount[i] - modeCount[0]);
+    for (a = 0; a < modeCount.length; a++) {
+        check = check + (modeCount[a] - modeCount[0]);
     }
-    for (i = 0; i < modeCount.length; i++) {
-        if (modeCount[i] == maxCount && check != 0) {
-            results.push(dataValues[i]);
+    for (b = 0; b < modeCount.length; b++) {
+        if (modeCount[b] == maxCount && check != 0) {
+            results.push(dataValues[b]);
         }
     }
-    if (results[0] == undefined) {
+    console.log(results);
+    console.log(dataValues);
+    if(dataValues.length == 1) {
+        return dataValues[0];
+    }
+    else if (results[0] == undefined) {
         return "No Mode";
     }
+
+
     return results;
 }
 
@@ -246,11 +253,11 @@ function listOutliers(array) {
     for (i = 0; i < array.length; i++) {
         if (array[i] < ifl && array[i] > ofl) {
             mildLower = mildLower + " " + array[i];
-        } else if (array[i] <= ofl) {
+        } else if (array[i] < ofl) {
             extremeLower = extremeLower + " " + array[i];
         } else if (array[i] > ifh && array[i] < ofh) {
             mildHigher = mildHigher + " " + array[i];
-        } else if (array[i] >= ofh) {
+        } else if (array[i] > ofh) {
             extremeHigher = extremeHigher + " " + array[i];
         }
     }
@@ -345,6 +352,8 @@ function numDatSumMain() {
     document.getElementById('listOutliersText3').innerHTML = listOutliers(array)[2];
     document.getElementById('listOutliersText4').innerHTML = listOutliers(array)[3];
 }
+var blarg = [5,5,5,5];
+console.log(mode(blarg));
 
 
 
